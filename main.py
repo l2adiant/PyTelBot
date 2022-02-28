@@ -4,7 +4,7 @@ import os
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-API_KEY = os.environ.get("API_kEY")
+TOKEN = os.environ.get("API_kEY")
 # Enable logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -47,7 +47,7 @@ def echo3(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater(API_KEY)
+    updater = Updater(TOKEN)
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
@@ -65,8 +65,8 @@ def main() -> None:
 
     # Start the Bot
     # updater.start_polling()
-    updater.start_webhook(listen="0.0.0.0", port=os.environ.get("PORT", 443), url_path=API_KEY,
-                          webhook_url="https://telegram-bot-asim.herokuapp.com/" + API_KEY)
+    updater.start_webhook(listen="0.0.0.0", port=os.environ.get("PORT", 443),
+                          webhook_url="https://telegram-bot-asim.herokuapp.com/" + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
