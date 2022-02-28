@@ -5,7 +5,9 @@ PORT = int(os.environ.get('PORT', '8443'))
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-TOKEN = os.environ['API_KEY']
+#TOKEN = os.environ['API_KEY']
+TOKEN = os.environ.get('API_KEY')
+
 # Enable logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
