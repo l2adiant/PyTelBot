@@ -66,7 +66,7 @@ def main() -> None:
     # Start the Bot
     # updater.start_polling()
     updater.start_webhook(listen="0.0.0.0", port=os.environ.get("PORT", 443), url_path=API_KEY,
-                          webhook_url="https://git.heroku.com/telegram-bot-asim.git" + API_KEY)
+                          webhook_url="https://telegram-bot-asim.herokuapp.com/" + API_KEY)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
