@@ -365,7 +365,7 @@ def error(update, context):
 
 # Run the programme
 if __name__ == '__main__':
-    updater = Updater(API_KEY, use_context=True)
+    updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
 
     # Commands
