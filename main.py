@@ -2,7 +2,6 @@ import logging
 from telegram.ext import *
 from telegram import *
 from datetime import datetime
-#import responses
 import sqlite3
 from tabulate import tabulate
 from constant import ALLOWED_RSO, TELENOR_NUM, ALLOWED_ADMIN
