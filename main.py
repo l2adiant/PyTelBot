@@ -8,13 +8,12 @@ from tabulate import tabulate
 from constant import ALLOWED_RSO, TELENOR_NUM, ALLOWED_ADMIN
 import os
 
-
- PORT = int(os.environ.get('PORT', '8443'))
- TOKEN = os.environ.get('API_KEY')
- DB_NAME = os.environ.get('DB_NAME')
- DB_USER = os.environ.get('DB_USER')
- DB_PASS = os.environ.get('DB_PASS')
- DB_HOST = os.environ.get('DB_HOST')
+PORT = int(os.environ.get('PORT', '8443'))
+TOKEN = os.environ.get('API_KEY')
+DB_NAME = os.environ.get('DB_NAME')
+DB_USER = os.environ.get('DB_USER')
+DB_PASS = os.environ.get('DB_PASS')
+DB_HOST = os.environ.get('DB_HOST')
 
 CONN = mysql.connector.connect(database=DB_NAME, user=DB_USER,
                                password=DB_PASS, host=DB_HOST)
